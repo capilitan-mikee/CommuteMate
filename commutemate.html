@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CommuteMate - Home</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #e6f0fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    /* Phone Frame */
+    .phone {
+      width: 360px;
+      height: 700px;
+      background: #fff;
+      border-radius: 40px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+      position: relative;
+      overflow: hidden;
+      border: 8px solid #222;
+    }
+
+    /* Top Notch */
+    .notch {
+      width: 180px;
+      height: 30px;
+      background: #222;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      margin: 0 auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    /* Screen */
+    .screen {
+      padding: 60px 20px 20px 20px; /* space for notch */
+      height: 100%;
+      background: linear-gradient(160deg, #ffffff, #dbeafe, #93c5fd);
+      color: #1e3a8a;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Logo */
+    .logo {
+      width: 130px;
+      height: 130px;
+      margin-bottom: 25px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .logo img {
+      width: 100%;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #1d4ed8;
+    }
+
+    p {
+      font-size: 15px;
+      margin-bottom: 35px;
+      max-width: 280px;
+      line-height: 1.4;
+      color: #334155;
+    }
+
+    .btn {
+      background: #1d4ed8;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.25s;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(29,78,216,0.3);
+    }
+
+    .btn:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(29,78,216,0.4);
+    }
+
+    /* Home bar (bottom iPhone style) */
+    .home-bar {
+      width: 100px;
+      height: 5px;
+      background: #cbd5e1;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="screen">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="commutematelogo.png" alt="CommuteMate Logo">
+      </div>
+
+      <h1>Welcome to CommuteMate</h1>
+      <p>Your smart commuting partner for real-time transport updates, ticketing, and more.</p>
+
+      <a href="#" class="btn">Get Started</a>
+    </div>
+    <div class="home-bar"></div>
+  </div>
+</body>
+</html>
