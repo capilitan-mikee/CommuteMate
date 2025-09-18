@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CommuteMate - Dashboard</title>
+  <style>
+    body {
+      background: #e6f0fa;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    /* Phone mockup */
+    .phone {
+    width: 360px;
+    height: 700px;
+    background: linear-gradient(160deg, #ffffff, #dbeafe, #93c5fd); /* instead of white */
+    border-radius: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border: 8px solid #222;
+    }
+
+    .screen {
+    padding: 70px 20px 80px; 
+    flex: 1;
+    /* remove the gradient background */
+    background: transparent; 
+    color: #1e3a8a;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-sizing: border-box;
+    }
+
+
+    .notch {
+      width: 180px;
+      height: 30px;
+      background: #222;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      margin: 0 auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1d4ed8;
+      margin-bottom: 6px;
+    }
+
+    .header p {
+      font-size: 13px;
+      color: #475569;
+    }
+
+    /* Features grid */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .feature {
+      background: white;
+      border-radius: 16px;
+      padding: 18px 14px;
+      box-shadow: 0 4px 10px rgba(29,78,216,0.15);
+      text-align: center;
+      transition: 0.25s;
+    }
+
+    .feature:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(29,78,216,0.25);
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 10px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #3b82f6, #60a5fa);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #1e3a8a;
+      line-height: 1.2;
+    }
+
+    /* Bottom nav */
+    .bottom-nav {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .nav-item {
+      text-align: center;
+      flex: 1;
+      color: #64748b;
+      font-size: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .nav-item.active {
+      color: #1d4ed8;
+      font-weight: 600;
+    }
+
+    .nav-item span {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="screen">
+      <div class="header">
+        <h1>CommuteMate</h1>
+        <p>Smart Commuting for Every Filipino</p>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="icon">📍</div>
+          <div class="label">Real-time Location</div>
+        </div>
+        <div class="feature">
+          <div class="icon">⏱</div>
+          <div class="label">Live Terminal Updates</div>
+        </div>
+        <div class="feature">
+          <div class="icon">🎫</div>
+          <div class="label">Online Ticketing</div>
+        </div>
+        <div class="feature">
+          <div class="icon">📊</div>
+          <div class="label">LTFRB / DOTr Reports</div>
+        </div>
+        <div class="feature">
+          <div class="icon">💺</div>
+          <div class="label">Seat Checker</div>
+        </div>
+        <div class="feature">
+          <div class="icon">📱</div>
+          <div class="label">SMS Updates</div>
+        </div>
+        <div class="feature">
+          <div class="icon">↻</div>
+          <div class="label">Smart Reroute</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+      <div class="nav-item active">
+        <span>🏠</span>
+        Home
+      </div>
+      <div class="nav-item">
+        <span>👤</span>
+        Profile
+      </div>
+      <div class="nav-item">
+        <span>⚙️</span>
+        Settings
+      </div>
+    </div>
+  </div>
+</body>
+</html>
